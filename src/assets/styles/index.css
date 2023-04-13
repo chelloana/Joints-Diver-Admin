@@ -1,0 +1,44 @@
+@import url("font.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply bg-primaryBackground font-plusjakarta text-dark;
+    }
+    ::-webkit-scrollbar {
+        @apply w-2.5;
+    }
+    ::-webkit-scrollbar-track {
+        @apply bg-gray2;
+    }
+    ::-webkit-scrollbar-thumb {
+        @apply rounded-full bg-contactBox;
+    }
+}
+
+@layer components {
+    .title {
+        @apply font-playfair text-3xl font-bold leading-[3rem] tracking-wide;
+    }
+
+    .subtitle {
+        @apply font-medium leading-7 tracking-wide;
+    }
+
+    .button_primary {
+        @apply flex items-center gap-2 rounded-full px-6 py-2 font-bold tracking-wide lg:text-lg;
+    }
+}
+
+.active {
+    @apply font-bold text-primary;
+}
+
+@media only screen and (max-width: 767.98px) {
+    .active {
+        filter: invert(54%) sepia(31%) saturate(2293%) hue-rotate(167deg) brightness(86%) contrast(80%);
+    }
+}
